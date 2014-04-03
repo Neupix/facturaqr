@@ -30,10 +30,11 @@ function scan() {
   
               //the we transform the integer part into a real INT, and then take only the first two cent characters
               document.getElementById(each[x][0]).innerHTML = '$' + parseInt(price[0],10) + '.' + price[1].substring(0,2);
-            } else {
-              //if the id doesn't existes (because the qr was wrong)
-              error();
             }
+
+          } else {
+             //if the id doesn't existes (because the qr was wrong)
+             error();
           }
         }
 
