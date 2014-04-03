@@ -5,6 +5,7 @@ body{font:1.2em/1.618 "Roboto Regular", sans-serif;-webkit-touch-callout: none;-
 h1{;text-align: center;}
 h1,h2,h3{font-family:"Roboto Thin", sans-serif;font-weight: 100;line-height: 1;}
 
+.data{display: none;}
 .data-title{padding-top: 1em;}
 
 .button{line-height: 1;display: block;height: 3em;text-align: center;color:#fff;background:#f80;border-radius:3px;line-height: 3em;text-decoration: none;position: absolute;bottom: 1em;left: 1em;right: 1em;}
