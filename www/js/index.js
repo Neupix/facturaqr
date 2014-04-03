@@ -5,6 +5,7 @@ function onDeviceReady() {
 }
 
 var hasFailed = 0;
+var each = [];
 
 function scan() {
   //reset fail detector
@@ -19,7 +20,7 @@ function scan() {
 
         //spliting the data by the &
         var data = raw.split('&');
-        var each = [];
+        
         for(x=0;x<data.length;x++) {
           
           //getting the var and the value
