@@ -25,31 +25,35 @@
         <link rel="stylesheet" type="text/css" href="css/index.css" />
         <title>Factura QR</title>
     </head>
-    <body id="body" class="start">
+    <body id="body" class="init">
         <div class="p">
             <h1 class="logo title">Factura QR</h1>
             <div class="help data-title">Escanea el código QR de tus facturas y mira su información (facturas mexicanas).</div>
 
             <div id="data" class="data">
-                <div class="data-title">RFC del emisor.</div>
-                <h2 id="re">ASDASD456</h2>
+                <div class="data-title">RFC del emisor</div>
+                <h2 id="re">¿?</h2>
 
-                <div class="data-title">RFC del receptor.</div>
-                <h2 id="rr">ASDASDSAD</h2>
+                <div class="data-title">RFC del receptor</div>
+                <h2 id="rr">¿?</h2>
 
-                <div class="data-title">Cantidad.</div>
-                <h2 id="tt">$50.5</h2>
+                <div class="data-title">Cantidad</div>
+                <h2 id="tt">¿?</h2>
 
-                <div class="data-title">ID de la factura.</div>
-                <h2 id="id">ASDFASDFASDF</h2>
+                <div class="data-title">ID de la factura</div>
+                <h2 id="id">¿?</h2>
             </div>
 
-            <div class="error">
+            <div class="error-msj">
                 Ocurrió un error, no se pudo leer el código o tiene un formato incorrecto.
                 <br/>
                 Este programa solo lee codigo QR de facturas mexicanas.
+                <br><br>
+                Por favor, intente de nuevo, o contacto a los desarrolladores. <br>
+                info@neupix.com
             </div>
 
+            <a id="startBtn" href="javascript:scan()" class="button email">Enviar por email</a>
             <a id="startBtn" href="javascript:scan()" class="button start">Escanear QR</a>
         </div>
 
