@@ -25,11 +25,10 @@
         <link rel="stylesheet" type="text/css" href="css/index.css" />
         <title>Factura QR</title>
     </head>
-    <body>
-        
+    <body id="body" class="start">
         <div class="p">
             <h1 class="logo title">Factura QR</h1>
-            <div id="info">Aquí podrás visualizar la información de los código QR de tus facturas (solo para México).</div>
+            <div class="help data-title">Escanea el código QR de tus facturas y mira su información (facturas mexicanas).</div>
 
             <div id="data" class="data">
                 <div class="data-title">RFC del emisor.</div>
@@ -45,7 +44,13 @@
                 <h2 id="id">ASDFASDFASDF</h2>
             </div>
 
-            <a id="startBtn" href="javascript:scan()" class="button start">Iniciar</a>
+            <div class="error">
+                Ocurrió un error, no se pudo leer el código o tiene un formato incorrecto.
+                <br/>
+                Este programa solo lee codigo QR de facturas mexicanas.
+            </div>
+
+            <a id="startBtn" href="javascript:scan()" class="button start">Escanear QR</a>
         </div>
 
         <script type="text/javascript" src="phonegap.js"></script>
