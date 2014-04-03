@@ -3,7 +3,8 @@ document.addEventListener("deviceready", onDeviceReady, false);
 function onDeviceReady() {
 cordova.plugins.barcodeScanner.scan(
       function (result) {
-        var data = result.split('&');
+        var raw = result.text;
+        var data = raw.split('&');
         var each = [];
         for(x=0;x<data.length;x++) {
           each[x] = data[x].split('=');
