@@ -44,7 +44,7 @@ function scan() {
           }
         }
         //changing the ui
-        document.getElementById('body').className  = "success";
+        if(!hasFailed) document.getElementById('body').className  = "success";
       }, 
       function (error) {
           error();
@@ -54,7 +54,7 @@ function scan() {
 
 function email() {
   var userEmail = prompt("¿Cuál es tu email?");
-  var mailToUrl = "mailto:" + userEmail + "?Subject=Factura%20" + userEmail + "&Body=BODY";
+  var mailToUrl = "mailto:" + userEmail + "?subject=Factura:" + userEmail + "&Body=BODY";
   window.location = mailToUrl;
   console.log(mailToUrl);
 }
