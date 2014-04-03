@@ -13,7 +13,7 @@ function scan() {
         for(x=0;x<data.length;x++) {
           each[x] = data[x].split('=');
 
-          if(each[x] != 'tt') {
+          if(each[x][0] != 'tt') {
             document.getElementById(each[x][0]).innerHTML = each[x][1];
           } else {
             var price = each[x][1].split('.');
