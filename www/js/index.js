@@ -26,7 +26,7 @@ function scan() {
           each[x] = data[x].split('=');
 
           //currect sintax and prev fails
-          if(each[x][0].length != 2 && hasFailed == 0){
+          if(each[x][0].length == 2 && hasFailed == 0){
             //if this is price, we need to do an additional thing...
             if(each[x][0] != 'tt') {
               document.getElementById(each[x][0]).innerHTML = each[x][1];
@@ -44,7 +44,7 @@ function scan() {
           }
         }
         //changing the ui
-        if(!hasFailed) document.getElementById('body').className  = "success";
+        if(hasFailed == 0) document.getElementById('body').className = "success";
       }, 
       function (error) {
           error();
@@ -61,5 +61,5 @@ function email() {
 
 function error() {
   hasFailed = 1;
-  document.getElementById('body').className  = "error";
+  document.getElementById('body').className = "error";
 }
