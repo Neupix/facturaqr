@@ -26,7 +26,7 @@ function scan() {
           each[x] = data[x].split('=');
 
           //currect sintax and prev fails
-          if(document.getElementById(each[x][0].length != 2 && hasFailed == 0){
+          if(document.getElementById(each[x][0]).length != 2 && hasFailed == 0){
             //if this is price, we need to do an additional thing...
             if(each[x][0] != 'tt') {
               document.getElementById(each[x][0]).innerHTML = each[x][1];
