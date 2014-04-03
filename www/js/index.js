@@ -4,7 +4,12 @@ function onDeviceReady() {
 
 }
 
+var hasFailed = 0;
+
 function scan() {
+  //reset fail detector
+  hasFailed = 0;
+
   //starting qr plugin
   cordova.plugins.barcodeScanner.scan(
       function (result) {
@@ -20,7 +25,8 @@ function scan() {
           //getting the var and the value
           each[x] = data[x].split('=');
 
-          if(document.getElementById(each[x][0]) != null){
+          //currect sintax and prev fails
+          if(document.getElementById(each[x][0]) != null %% hasFailed == 0){
             //if this is price, we need to do an additional thing...
             if(each[x][0] != 'tt') {
               document.getElementById(each[x][0]).innerHTML = each[x][1];
@@ -48,5 +54,6 @@ function scan() {
 }
 
 function error() {
+  hasFailed = 1;
   document.getElementById('body').className  = "error";
 }
