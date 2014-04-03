@@ -26,7 +26,7 @@ function scan() {
           each[x] = data[x].split('=');
 
           //currect sintax and prev fails
-          if(document.getElementById(each[x][0]) != null %% hasFailed == 0){
+          if(document.getElementById(each[x][0]) != null && hasFailed == 0){
             //if this is price, we need to do an additional thing...
             if(each[x][0] != 'tt') {
               document.getElementById(each[x][0]).innerHTML = each[x][1];
@@ -43,14 +43,19 @@ function scan() {
              error();
           }
         }
-
         //changing the ui
         document.getElementById('body').className  = "success";
       }, 
       function (error) {
           error();
       }
-   );
+  );
+}
+
+function email() {
+  var userEmail = prompt("¿Cuál es tu email?");
+
+  document.location.href = "mailto:" + userEmail + "?Subject=Factura " + each[3][1] + "&Body=BODY";
 }
 
 function error() {
