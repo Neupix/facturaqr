@@ -28,10 +28,24 @@
     <body>
         
         <div class="p">
-            <h1 class="logo title">Bienvenido a Factura QR</h1>
-            Aquí podrás visualizar la información de los código QR de tus facturas (solo para México).
+            <h1 class="logo title">Factura QR</h1>
+            <div id="info">Aquí podrás visualizar la información de los código QR de tus facturas (solo para México).</div>
 
-                <a href="javascript:scan()" class="button start">Iniciar</a>
+            <div class="data">
+                <div class="data-title">RFC del emisor.</div>
+                <h2 id="re">ASDASD456</h2>
+
+                <div class="data-title">RFC del receptor.</div>
+                <h2 id="rr">ASDASDSAD</h2>
+
+                <div class="data-title">Cantidad.</div>
+                <h2 id="tt">$50.5</h2>
+
+                <div class="data-title">ID de la factura.</div>
+                <h2 id="id">ASDFASDFASDF</h2>
+            </div>
+
+            <a id="startBtn" href="javascript:scan()" class="button start">Iniciar</a>
         </div>
 
         <script type="text/javascript" src="phonegap.js"></script>

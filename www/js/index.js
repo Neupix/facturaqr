@@ -7,12 +7,16 @@ function onDeviceReady() {
 function scan() {
   cordova.plugins.barcodeScanner.scan(
       function (result) {
-        var raw = result.text;
+        var raw = result.text.substring(1);
         var data = raw.split('&');
         var each = [];
         for(x=0;x<data.length;x++) {
           each[x] = data[x].split('=');
-          alert('el resultado de ' + each[x][0] + ' es ' + each[x][1]);
+          getElementById(each[x][0]).innerHTML = each[x][1];
+
+          getElementById('info').style.display = "none";
+          getElementById('data').style.display = "block";
+          getElementById('startBtn').innerHTML = "Escanear otra vez";
         }
       }, 
       function (error) {
