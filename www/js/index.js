@@ -6,6 +6,7 @@ function onDeviceReady() {
 
 var hasFailed = 0;
 var each = [];
+var stringPrice = 0;
 
 function scan() {
   //reset fail detector
@@ -36,7 +37,7 @@ function scan() {
               var price = each[x][1].split('.');
   
               //the we transform the integer part into a real INT, and then take only the first two cent characters
-              var stringPrice = '$' + parseInt(price[0],10) + '.' + price[1].substring(0,2);
+              stringPrice = '$' + parseInt(price[0],10) + '.' + price[1].substring(0,2);
               document.getElementById(each[x][0]).innerHTML = stringPrice;
             }
 
