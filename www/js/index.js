@@ -12,8 +12,16 @@ function scan() {
         var each = [];
         for(x=0;x<data.length;x++) {
           each[x] = data[x].split('=');
-          document.getElementById(each[x][0]).innerHTML = each[x][1];
+
+          if(each[x] != 'tt') {
+            document.getElementById(each[x][0]).innerHTML = each[x][1];
+          } else {
+            var price = each[x][1].split('.');
+            document.getElementById(each[x][0]).innerHTML = '$' + parseInt(price[0],10) + '.' + price[1].substring(0,2);
+          }
+          
         }
+
         document.getElementById('info').style.display = "none";
         document.getElementById('data').style.display = "block";
         document.getElementById('startBtn').innerHTML = "Escanear otra vez";
