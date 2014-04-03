@@ -5,7 +5,7 @@ cordova.plugins.barcodeScanner.scan(
       function (result) {
         var data = result.split('&');
         var result = [];
-        for(x=0;x<data.length) {
+        for(x=0;x<data.length;x++) {
           result[x] = data[x].split('=');
           alert('el resultado de ' + result[x][0] + ' es ' + result[x][1]);
         }
