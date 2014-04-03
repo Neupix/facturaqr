@@ -4,10 +4,10 @@ function onDeviceReady() {
 cordova.plugins.barcodeScanner.scan(
       function (result) {
         var data = result.split('&');
-        var strings = [];
+        var each = [];
         for(x=0;x<data.length;x++) {
-          strings[x] = data[x].split('=');
-          alert('el resultado de ' + strings[x][0] + ' es ' + strings[x][1]);
+          each[x] = data[x].split('=');
+          alert('el resultado de ' + each[x][0] + ' es ' + each[x][1]);
         }
       }, 
       function (error) {
