@@ -59,7 +59,7 @@ function email() {
   var userEmail = prompt("¿Cuál es tu email?");
   var bodyMsj = "RFC del emisor: " + each[0][1] + "\n\nRFC del receptor: " + each[1][1] + "\n\nCantidad: " + stringPrice + "\n\nID de la factura: " + each[3][1] + "\n\n\nEmail generado por Factura QR, de http://neupix.com/";
   bodyMsj = encodeURIComponent(bodyMsj.trim());
-  var mailToUrl = "mailto:" + userEmail + "?subject=Factura:" + each[3][1] + "?body=" + bodyMsj;
+  var mailToUrl = "mailto:" + userEmail + "?subject=Factura:" + each[3][1] + "&body=" + bodyMsj;
   window.location = mailToUrl;
 }
 
