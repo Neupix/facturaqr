@@ -20,7 +20,7 @@ function scan() {
           //getting the var and the value
           each[x] = data[x].split('=');
 
-          if(document.getElementById("elemId") != null){
+          if(document.getElementById(each[x][0]) != null){
             //if this is price, we need to do an additional thing...
             if(each[x][0] != 'tt') {
               document.getElementById(each[x][0]).innerHTML = each[x][1];
