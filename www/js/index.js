@@ -16,10 +16,11 @@ function scan() {
         var data = raw.split('&');
         var each = [];
         for(x=0;x<data.length;x++) {
+          
+          //getting the var and the value
+          each[x] = data[x].split('=');
+
           if(document.getElementById("elemId") != null){
-            //getting the var and the value
-            each[x] = data[x].split('=');
-  
             //if this is price, we need to do an additional thing...
             if(each[x][0] != 'tt') {
               document.getElementById(each[x][0]).innerHTML = each[x][1];
